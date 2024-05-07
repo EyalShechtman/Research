@@ -6,7 +6,7 @@ import requests
 from openai import OpenAI
 
 
-Newsapi_key = 'ad413b4373c543b59927a7f2b383aad0'
+Newsapi_key = ''
 base_url = 'https://newsapi.org/v2/everything?'
 
 
@@ -61,7 +61,7 @@ def extract_descriptions(keywords):
 
 
 def summarize_description(descriptions):
-    client = OpenAI(api_key="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")
+    client = OpenAI(api_key="")
     gbt_model = "gpt-3.5-turbo"
     enclosed_prompt = str(descriptions) + ". Can you take the average of all summaries and give me a 3 sentence final summary?"
     response = client.chat.completions.create(
